@@ -8,6 +8,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@400;600;700;800&family=Varela+Round&display=swap"
+    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap"
+    rel="stylesheet">
+
     <style>
 
       :root {
@@ -98,7 +110,7 @@
 
     .nav-logo {
       display: flex;
-      align-items: center;
+      align-items: center;;
     }
 
     .nav-logo-right {
@@ -116,7 +128,7 @@
       font-size: 1.5rem;
       font-weight: 400;
       letter-spacing: 0px;
-      margin-left: 50px;
+      margin-left: 20px;
     }
 
     .nav-logo-text span {
@@ -125,15 +137,16 @@
     }
 
       .hero-section {
-        padding: 2rem 1rem;
+        padding: 2rem ;
         background-color: #000;
         position: relative;
+        margin-bottom: 2rem;
       }
 
       .hero-card {
         background: linear-gradient(135deg, #435c19, #556b2f);
         border-radius: 40px;
-        padding: 4rem 0rem 0rem 0rem;
+        padding: 4rem 0rem;
         max-width: 1400px;
         margin: 0 auto;
         position: relative;
@@ -162,7 +175,7 @@
         z-index: 10;
       }
       .star-4 {
-        bottom: 25%;
+        bottom: 28%;
         right: 28%;
         z-index: 10;
         color: #9dc657;
@@ -735,7 +748,7 @@
         text-align: center;
         font-size: 2.5rem;
         font-weight: 800;
-        margin-bottom: 60px;
+        margin-bottom: 0px;
         line-height: 1.2;
       }
 
@@ -752,7 +765,7 @@
         overflow: hidden;
         position: relative;
         width: 100%;
-        padding: 20px 0;
+        padding: 0px 0;
         mask-image: linear-gradient(
           to right,
           transparent 0%,
@@ -1031,7 +1044,7 @@
       /* Span full width */
       grid-row: 2;
       order: unset;
-      margin-top: 10px;
+      margin-top: -20px;
     }
 
     .footer-column-title {
@@ -1280,8 +1293,7 @@
       .card-large-left,
       .card-mid-right {
         justify-content: flex-start;
-        border-radius:  20px;
-      }
+   }
 
       .card-large-left h3,
       .card-mid-right h3 {
@@ -1320,7 +1332,7 @@
       .card-bottom-full {
         justify-content: flex-end;
         flex-direction: row-reverse;
-        border-radius: 20px;
+        border-radius: 0rem 2rem 2rem 0rem;
         padding-left: 20px;
       }
 
@@ -1615,7 +1627,7 @@
       .footer-column-center {
         grid-column: auto;
         grid-row: auto;
-        margin-top: 0;
+        margin-bottom: 0rem;
         order: 2;
         align-items: center;
         flex: 1;
@@ -1654,7 +1666,7 @@
 
         .creators-headline {
           font-size: 1.8rem;
-          margin-bottom: 40px;
+          margin-top: 0px;
         }
 
         .creator-card {
@@ -1684,8 +1696,9 @@
           );
         }
 
-        /* PRICING CARD */
-        
+        .footer-column-center{
+          margin-top: -80px;
+        }
       }
 
       /* Tablet Layout */
@@ -1927,8 +1940,9 @@
       /* Mobile - Name behind image */
       @media (max-width: 768px) {
         .hero-card {
-          padding: 2rem 0rem 4rem;
+          padding: 2rem 0rem 0rem;
           border-radius: 30px;
+          
         }
 
         .inner-banner {
@@ -1938,12 +1952,12 @@
           width: 150px;
           height: 160px;
           font-size: 1.5rem;
-          bottom: 40%;
+          bottom: 60%;
           right: 5%;
         }
 
         .mentor-area {
-          min-height: 400px;
+          min-height: 300px;
         }
 
         .mentor-area path {
@@ -2093,9 +2107,12 @@
           font-size: 0.95rem;
         }
 
+        
+
       }
 
       @media (max-width: 657px) {
+        
         .btn-cta {
           font-size: 1.3rem;
           min-width: 300px;
@@ -2114,12 +2131,20 @@
         .cta-buttons {
           margin-top: -3rem;
         }
+        .follower-count-number {
+          font-size: 2rem;
+        }
+        .mentor-portrait-wrapper {
+          width: 250px;
+          top: 120px;
+          left: -20px;
+        }
         /* .star-1{
         margin-bottom: -100rem;
        } */
         .star-4 {
           font-size: 3rem;
-          margin-bottom: 5.5rem;
+          margin-bottom: 2.5rem;
           margin-left: 1rem;
         }
         .star-1 {
@@ -2127,8 +2152,9 @@
           margin-bottom: -10rem;
           margin-left: 1rem;
         }
+        
         .stats-badge {
-          font-size: 1.2rem;
+          font-size: 1rem;
           margin-bottom: -3rem;
         }
         .inner-banner {
@@ -2141,6 +2167,33 @@
           width: 21rem;
           margin-left: 2rem;
         }
+
+        .ach-grid {
+          flex-direction: column;
+        }
+
+        .ach-card {
+          font-size: 1.8rem;
+          padding: 40px 30px;
+          min-height: 100px;
+          /* Reduced desktop height too */
+        }
+        .achievements-section {
+        padding: 0px 20px;
+        background-color: #000;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+      }
+      .mentor-badge{
+       /* background-color: red; */
+       border-radius: 10px 10px 40px 20px;
+      }
+
+      .pricing-grid{
+          width: 21rem;
+          margin-left: 2rem;
+      }
+      /* .creators-marquee-wrapper */
       }
     </style>
   </head>
@@ -3268,7 +3321,7 @@
         <!-- Center Column: Logo -->
         <div class="footer-column footer-column-center">
           <div class="footer-logo">
-            <img src="d logo.png" alt="Demand School Logo">
+            <img src="assets/d logo.png" alt="Demand School Logo">
           </div>
         </div>
 
@@ -3293,7 +3346,6 @@
     <!-- Script for any interactivity if needed -->
     <script>
       console.log("Hero Section Loaded");
-
       // Accordion Functionality
       const moduleHeaders = document.querySelectorAll(".module-header");
 
