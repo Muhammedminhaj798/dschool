@@ -1,0 +1,3374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Branding Mastery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+
+      :root {
+      --color-bg: #000000;
+      --color-text: #FFFFFF;
+      --color-accent-1: #8ABD4C;
+      /* Lightest Green */
+      --color-accent-2: #708A46;
+      --color-accent-3: #6B8E23;
+      --color-accent-4: #556B2F;
+      /* Darkest Green */
+      --color-container-bg: #5f7d3e;
+      /* Approx soft green for container based on image */
+
+      --font-primary: 'Montserrat', sans-serif;
+      --font-secondary: 'Varela Round', sans-serif;
+    }
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0; 
+      font-family: "Unbounded", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-primary);
+      overflow-x: hidden;
+      overflow-y: auto;
+      min-height: 100vh;
+    }
+
+    @media (max-width: 767px) {
+      body {
+        padding-bottom: 0px;
+      }
+    }
+
+    /* navbar/ */
+
+
+    /* Top Strip */
+    .top-strip {
+      background-color: #8dc73d;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 20px;
+      font-weight: 600;
+
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      background-color: #708a46;
+    }
+
+    /* Adjusting layout structure to match image: 
+           There is a top green header area, and then the rounded card starts below or within it.
+           Looking closely: The "Personal Branding Masterclass" text is ON layout, 
+           and the rounded card is BELOW the header text?
+           Actually, looks like:
+           1. Top Strip "Create Engage Grow"
+           2. Header Area (Dark Green) with "Personal Branding Masterclass" & "DEMAND"
+           3. Main Content (Rounded Card) sits inside a black void or is the main body.
+           Wait, user says: "Global ... Background: Solid Black".
+           The image shows a large green container with rounded corners.
+           Let's imply a container wrapper.
+        */
+
+    .nav-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 10px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-logo-right img {
+      height: 120px;
+      width: auto;
+    }
+
+    .nav-logo-text {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0px;
+      margin-left: 50px;
+    }
+
+    .nav-logo-text span {
+      display: block;
+      font-weight: 400;
+    }
+
+      .hero-section {
+        padding: 2rem 1rem;
+        background-color: #000;
+        position: relative;
+      }
+
+      .hero-card {
+        background: linear-gradient(135deg, #435c19, #556b2f);
+        border-radius: 40px;
+        padding: 4rem 0rem 0rem 0rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Sparkles */
+      .star {
+        position: absolute;
+        color: white;
+        font-size: 40px;
+        z-index: 5;
+      }
+      .star-1 {
+        top: 15%;
+        left: 10%;
+      }
+      .star-2 {
+        top: 15%;
+        right: 15%;
+        z-index: 10;
+      }
+      .star-3 {
+        bottom: 20%;
+        left: 15%;
+        z-index: 10;
+      }
+      .star-4 {
+        bottom: 25%;
+        right: 28%;
+        z-index: 10;
+        color: #9dc657;
+        font-size: 4rem;
+      }
+
+      .inner-banner {
+        background: #8dc73d;
+        width: fit-content;
+        padding: 12px 30px;
+        margin: 0 auto 2rem;
+        border-radius: 50px;
+        background-color: #729535dc;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .cta-curve {
+        position: relative; /* absolute remove */
+        bottom: 160px; /* first SVG-ന് താഴെ shift */
+        left: 0;
+        width: 100%;
+        height: 450px;
+        z-index: 6;
+        /* background-color: ; first SVG-ന് താഴെ */
+      }
+      .stats-badge {
+        background-color: #fff;
+        color: #435c19;
+        padding: 12px 20px;
+        border-radius: 20px;
+        display: inline-flex;
+        align-items: start;
+        gap: 10px;
+        width: 350px;
+        height: 200px;
+        font-weight: 500;
+        font-size: 2rem;
+        position: absolute;
+        /* top: 36%; */
+        bottom: 45%;
+        right: 5%;
+        z-index: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .inner-banner h2 {
+        margin: 0;
+        font-size: clamp(1.8rem, 5vw, 3rem);
+        font-weight: 800;
+        color: white;
+      }
+
+      .headline {
+        font-size: clamp(2rem, 6vw, 5rem); /* desktop: max 4rem */
+        line-height: 1.1;
+        text-align: center;
+        margin: 0 0 0rem;
+        font-weight: 900;
+      }
+
+      .mentor-area {
+        position: relative;
+        width: 100%;
+        min-height: 600px;
+        overflow: hidden;
+      }
+
+      .curve {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 450px;
+        margin: 0px -90px 0px 0px;
+        z-index: 1;
+      }
+
+      .mentor-img {
+        position: absolute;
+        bottom: -40px;
+        left: 10%;
+        width: clamp(300px, 45vw, 500px);
+        height: auto;
+        object-fit: contain;
+        filter: grayscale(100%) contrast(1.1);
+        z-index: 5; /* image മുകളിൽ */
+      }
+
+      .nisam-about {
+        position: absolute;
+        bottom: 20%;
+        left: 49%;
+        transform: translateX(-50%);
+        z-index: 3; /* name image-ന് താഴെ */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .mentor-name {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 600;
+        color: white;
+        text-transform: uppercase;
+        margin-left: 10rem;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* image-ന് പിന്നിൽ visible ആകാൻ */
+      }
+
+      .mentor-name-tag {
+        background: #8dc73d;
+        padding: 15px 30px;
+        border-radius: 20px;
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        font-weight: 800;
+        color: white;
+        display: inline-block;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        width: 60vb;
+        margin-left: 10rem;
+        text-align: right;
+      }
+
+      .cta-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        height: 20rem;
+        justify-content: center;
+        /* margin-top: 3rem; */
+      }
+
+      .btn-cta {
+        background: white;
+        color: #435c19;
+        border: none;
+        position: relative;
+        padding: 1.2rem 2.5rem;
+        border-radius: 50px;
+        font-weight: 700;
+        cursor: pointer;
+        min-width: 550px;
+        z-index: 7;
+        margin: 0rem 1rem 0rem 1rem;
+        font-size: 2.5rem;
+      }
+      .cta-buttons {
+        position: absolute;
+        /* bottom: 140px;  */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin-top: -3.5rem;
+      }
+
+      /* --- Scroll Banner Section --- */
+      .scroll-banner-section {
+        position: relative;
+        width: 100%;
+
+        height: 180px;
+        /* Reduced from 300px */
+        background-color: #000;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -50px;
+        /* Overlap slightly with hero or just sit below */
+        z-index: 1;
+        /* Below hero if hero has z-index? */
+      }
+
+      .banner-band {
+        position: absolute;
+        width: 200%;
+        /* Make it much wider than screen */
+        /* padding: 15px 0; */
+        padding: 5px 0;
+        background-color: #8dc73d;
+        /* #8ABD4C with alpha */
+        color: #fff;
+        font-family: var(--font-primary);
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        white-space: nowrap;
+        display: flex;
+        /* To hold repeated text spans if needed */
+        align-items: center;
+        box-shadow: 0 0 20px rgba(138, 189, 76, 0.4);
+      }
+
+      .band-1 {
+        top: 50%;
+        left: 50%;
+        /* Start centered, then rotate/translate for animation */
+        /* Note: We need to combine static centering with dynamic scrolling. 
+         Ideally, wrapper centers it, inner scrolls.
+      */
+        transform: translate(-50%, -50%) rotate(2deg);
+        width: 120vw;
+        /* Ensure it covers corners */
+        justify-content: center;
+        /* Center content initially */
+      }
+
+      .band-1 .banner-content {
+        animation: scroll-left-to-right 30s linear infinite;
+      }
+
+      .band-2 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-2deg);
+        width: 120vw;
+        justify-content: center;
+      }
+
+      .band-2 .banner-content {
+        animation: scroll-right-to-left 30s linear infinite;
+      }
+
+      /* We need to move animation to the content inside, 
+       because the band itself must stay fixed in position to remain crossed at center.
+    */
+
+      @keyframes scroll-left-to-right {
+        0% {
+          transform: translateX(-25%);
+        }
+
+        100% {
+          transform: translateX(25%);
+        }
+
+        /* Move half of the duplicated width */
+      }
+
+      @keyframes scroll-right-to-left {
+        0% {
+          transform: translateX(25%);
+        }
+
+        100% {
+          transform: translateX(-25%);
+        }
+      }
+      /* vide0 section */
+
+      .video-section {
+        padding: 30px 20px;
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-bg);
+      }
+
+      .video-container {
+        width: 100%;
+        max-width: 900px;
+
+        background-color: #fff;
+        /* White card as per screenshot hint */
+        border-radius: 40px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        position: relative;
+        padding-top: 45%;
+        /* Reduced from 56.25% to decrease height */
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      /* achievment section */
+      /* --- Achievements Section --- */
+      .achievements-section {
+        padding: 80px 20px;
+        background-color: #000;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+      }
+
+      .achievements-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .ach-headline {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 60px;
+        line-height: 1.1;
+      }
+
+      .ach-headline span {
+        color: #8dc73d;
+      }
+
+      .ach-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      .ach-card {
+        background-color: #8dc73d;
+        color: #fff;
+        padding: 30px 20px;
+        /* Reduced padding */
+        border-radius: 30px;
+        /* Gently reduced radius if needed, but keeping 40px is fine too. Let's stick to 30px per user vibe on other cards recently */
+        font-size: 2rem;
+        /* Slightly smaller font to fit */
+        font-weight: 800;
+        line-height: 1.1;
+        text-align: center;
+        flex: 1;
+        /* Ensure visual consistency */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 150px;
+        /* Reduced height */
+      }
+
+      /* --- Course Module Section --- */
+
+      .course-module-section {
+        padding: 80px 20px;
+        background-color: #000;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+      }
+
+      .module-container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .module-headline {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 50px;
+      }
+
+      .module-headline span {
+        color: #8dc73d;
+      }
+
+      .module-grid {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr;
+      }
+
+      .module-item {
+        background-color: #8dc73d;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .module-header {
+        padding: 25px 30px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 800;
+        font-size: 1.2rem;
+        color: #fff;
+        line-height: 1.2;
+      }
+
+      .module-header .icon {
+        font-size: 1.5rem;
+        font-weight: 400;
+        transition: transform 0.3s ease;
+      }
+
+      .module-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out, padding 0.3s ease;
+        background-color: #3a3939;
+        padding: 0 30px;
+      }
+
+      .module-content.active {
+        padding-bottom: 30px;
+      }
+
+      .module-content p {
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: 500;
+        margin: 0;
+      }
+
+      /* --- Course Mentor Section --- */
+
+      .course-mentor-section {
+
+      background-color: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      position: relative;
+    }
+
+    .course-mentor-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .course-mentor-logo {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-left: 0;
+    }
+
+    .course-mentor-logo h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .course-mentor-logo .course-text {
+      color: #fff;
+    }
+
+    .course-mentor-logo .mentor-text {
+      color: #8dc73d;
+    }
+
+    .course-mentor-content {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      min-height: 500px;
+    }
+
+    .mentor-portrait-wrapper {
+      position: absolute;
+      left: 0;
+      top: -122px;
+      bottom: 0;
+      z-index: 2;
+      width: 35%;
+      max-width: 1200px;
+    }
+
+    .mentor-portrait {
+      width: 100%;
+      height: auto;
+      filter: grayscale(100%);
+      display: block;
+      object-fit: contain;
+      object-position: bottom;
+    }
+
+    .mentor-info-card {
+      background-color: #f5f5f5;
+      border-radius: 30px 30px 110px 30px;
+      padding: 60px 50px;
+      margin-left: 0px;
+      width: 90%;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 400px;
+    }
+
+    .mentor-badge {
+      background-color: #8dc73d;
+      border-radius: 50px 50px 50px 0;
+      /* Adjusted radius */
+      padding: 20px 25px;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      /* Start at left edge */
+      top: 40%;
+      transform: translateY(-50%);
+      z-index: 0;
+      /* Lower z-index so it stays under other card inline content if needed, but mainly under portrait */
+      min-width: 200px;
+    }
+
+    .mentor-badge-name {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      display: block;
+      line-height: 1.2;
+    }
+
+    .mentor-badge-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    .follower-count {
+      text-align: right;
+      flex: 1;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .follower-count-number {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #556B2F;
+      line-height: 1;
+    }
+
+    .follower-count-label {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #556B2F;
+      line-height: 1;
+    }
+
+    .follower-count-platform {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #556B2F;
+      line-height: 1;
+    }
+
+      /* --- Creators We Work With Section --- */
+      .creators-section {
+        padding: 80px 20px;
+        background-color: #000;
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        overflow: hidden;
+      }
+
+      .creators-container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .creators-headline {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 60px;
+        line-height: 1.2;
+      }
+
+      .creators-headline .creators-text {
+        color: #8dc73d;
+      }
+
+      .creators-headline .work-text {
+        color: #fff;
+      }
+
+      /* Marquee Container */
+      .creators-marquee-wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        padding: 20px 0;
+        mask-image: linear-gradient(
+          to right,
+          transparent 0%,
+          black 5%,
+          black 95%,
+          transparent 100%
+        );
+        -webkit-mask-image: linear-gradient(
+          to right,
+          transparent 0%,
+          black 5%,
+          black 95%,
+          transparent 100%
+        );
+      }
+
+      .creators-marquee-track {
+        display: flex;
+        gap: 30px;
+        width: fit-content;
+        animation: scroll-creators 50s linear infinite;
+        will-change: transform;
+      }
+
+      .creators-marquee-wrapper:hover .creators-marquee-track {
+        animation-play-state: paused;
+      }
+
+      /* Card Styles */
+      .creator-card {
+        flex: 0 0 auto;
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .creator-image-wrapper {
+        position: relative;
+        width: 100%;
+        margin-bottom: 0;
+        /* padding: 0 10px; */
+      }
+
+      .creator-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 110%;
+        /* background-color: #8dc73d; */
+        border-radius: 0 50% 50% 0;
+        z-index: 0;
+        clip-path: polygon(0 0, 90% 0, 90% 100%, 0 100%);
+      }
+
+      .creator-image {
+        position: relative;
+        width: 100%;
+        padding-top: 130%;
+        overflow: hidden;
+        border-radius: 15px;
+        z-index: 1;
+      }
+
+      .creator-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* filter: grayscale(100%); */
+        /* background-color: #8dc73d; */
+      }
+
+      .creator-name {
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #8dc73d;
+        margin-top: -90px;
+        /* Reduced gap as requested */
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        letter-spacing: 0.5px;
+      }
+
+      .creator-role {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        line-height: 1.4;
+      }
+
+      /* Animation */
+      @keyframes scroll-creators {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* --- Pricing Plans Section --- */
+    .pricing-section {
+      padding: 80px 20px;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .pricing-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .pricing-headline {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 60px;
+      line-height: 1.2;
+    }
+
+    .pricing-headline span {
+      color: #8dc73d;
+    }
+
+    /* Pricing Cards Grid */
+    .pricing-grid {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .pricing-card {
+      background-color: #58751c;
+      border-radius: 20px 100px 30px 30px;
+      padding: 50px 30px;
+      flex: 1;
+      max-width: 380px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+      min-height: 550px;
+    }
+
+    .pricing-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(141, 199, 61, 0.5);
+      border-color: #8dc73d;
+    }
+
+    .plan-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .plan-price {
+      font-size: 3rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 30px;
+      text-align: center;
+      line-height: 1;
+    }
+
+    .plan-features {
+      flex: 1;
+      margin-bottom: 30px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    .feature-item i {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .feature-item .fa-square-check {
+      color: white;
+    }
+
+    .feature-item .fa-square-xmark {
+      color: white;
+    }
+
+    .plan-button {
+      background-color: #fff;
+      color: #58751c;
+      border: none;
+      padding: 18px 30px;
+      border-radius: 15px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: default;
+      transition: all 0.3s ease;
+      text-align: center;
+      width: 100%;
+      margin-top: auto;
+    }
+
+    .plan-button:hover {
+      cursor: pointer;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    }
+
+
+    /* --- Footer Section --- */
+    .footer-section {
+      background-color: #6a9413;
+      color: #fff;
+      font-family: var(--font-primary);
+ 
+      /* Reduced margin */
+      padding: 20px 10px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      height: 10rem;
+      margin: 0 auto;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 10px;
+      align-items: start;
+      /* align top to handle different heights */
+      text-align: center;
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Mobile Order: Follow Us (Left) | Contact (Right) | Logo (Bottom Center) */
+    .footer-column-left {
+      grid-column: 1;
+      grid-row: 1;
+      order: unset;
+      /* Remove user orders */
+    }
+
+    .footer-column-right {
+      grid-column: 2;
+      grid-row: 1;
+      order: unset;
+    }
+
+    .footer-column-center {
+      grid-column: 1 / -1;
+      /* Span full width */
+      grid-row: 2;
+      order: unset;
+      margin-top: 10px;
+    }
+
+    .footer-column-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      letter-spacing: -0.5px;
+      /* Tighter tracking like image */
+    }
+
+    .footer-social-icons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-social-icons a {
+      color: #fff;
+      font-size: 2.2rem;
+      /* Slightly larger icons */
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      cursor: pointer;
+    }
+
+    .footer-social-icons a:hover {
+      transform: scale(1.1);
+      opacity: 0.8;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-logo img {
+      max-width: 180px;
+      height: auto;
+    }
+
+    /* --- Fixed Enroll Button --- */
+    .fixed-enroll-button {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      padding: 15px 20px;
+      /* background-color: rgba(0, 0, 0, 0.8); */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3); */
+    }
+
+    .fixed-enroll-button button {
+      background-color: #fff;
+      color: #6A9413;
+      border: none;
+      padding: 18px 50px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: var(--font-primary);
+      cursor: pointer;
+      /* transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px; */
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .fixed-enroll-button button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    .fixed-enroll-button button:active {
+      transform: translateY(0);
+    }
+
+
+    .pain-points-section {
+      padding: 40px 10px;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .pain-points-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .pp-headline {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 50px;
+      line-height: 1.2;
+    }
+
+    .pp-headline span {
+      color: #8dc73d;
+    }
+
+    /* Grid Layout */
+    .pp-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    /* Cards */
+    .pp-card {
+      border-radius: 30px;
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      background-color: #8dc73d;
+      color: #fff;
+    }
+
+    .pp-card h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.1;
+      z-index: 2;
+      margin: 0;
+      flex: 2;
+      align-items: center;
+    }
+
+    .pp-card img {
+      width: 250px;
+      height: 250px;
+      flex-shrink: 0;
+    }
+
+    /* Cards 1 & 3: Image on right, aligned to bottom */
+    .card-large-left,
+    .card-mid-right {
+      align-items: flex-end;
+      border-radius: 0px 30px 30px 30px;
+    }
+
+    .card-large-left h3,
+    .card-mid-right h3 {
+      text-align: left;
+    }
+
+    /* Cards 2 & 4: Image on left, aligned to bottom */
+    .card-top-right,
+    .card-bottom-full {
+      align-items: flex-end;
+      padding-left: 10px;
+      padding-bottom: 0;
+    }
+
+    .card-top-right h3,
+    .card-bottom-full h3 {
+      text-align: right;
+    }
+
+    /* Cards 2 & 4: Darker green background */
+    .card-top-right,
+    .card-bottom-full {
+      background-color: #556b2f;
+      border-radius: 30px 0px 30px 30px;
+    }
+
+    /* ==================== MOBILE RESPONSIVE (< 768px) ==================== */
+    @media (max-width: 767px) {
+      .pain-points-section {
+        padding: 30px 12px;
+      }
+
+      .pp-headline {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+      }
+
+      .pp-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+  .pp-card.card-bottom-full img{
+        transform: scale(1.6);
+        top: 20px;
+
+  }
+  .pp-card.card-mid-right img{
+        transform: scale(1.3);
+        right: -20px;
+  }
+  .pp-card.card-top-right img{
+        transform: scale(1.8);
+        left: 0px;
+  }
+.pp-card.card-mid-right img{
+       transform: scale(1.6);
+       right : 5px;
+
+}
+.pp-card.card-large-left img{
+        transform: scale(1.2);
+        right : 10px;
+}
+
+        .pp-card {
+        min-height: 130px;
+        padding: 20px;
+        
+        display: flex;
+        align-items: center;
+      }
+
+      .pp-card h3 {
+        font-size: 1.4rem;
+        flex: 1;
+        max-width: 58%;
+      }
+      .pp-card.card-bottom-full img{
+        position: absolute;
+        transform: scale(2.2);
+      
+      }
+      
+      .pp-card img {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        filter: grayscale(100%);
+        z-index: 1;
+      }
+
+      /* Mobile Card 1 & 3: Text Left, Image Right */
+      .card-large-left,
+      .card-mid-right {
+        justify-content: flex-start;
+        border-radius:  20px;
+      }
+
+      .card-large-left h3,
+      .card-mid-right h3 {
+        text-align: left;
+        padding-right: 15px;
+      }
+
+      /* .card-large-left img,
+      .card-mid-right img {
+        right: 0;
+        top: 0;
+        width: 45%;
+        height: 100%;
+        object-position: right center;
+      } */
+       .card-large-left img{
+        bottom: -10px;
+        right: -10px;
+    
+       }
+       .card-top-right img{
+        bottom: -10px;
+        left: -40px;
+       }
+         .card-mid-right img{
+          bottom: -10px;
+          right: -40px;
+         }
+         .card-bottom-full img{
+          bottom: -10px;
+          left: -50px;
+         }
+
+      /* Mobile Card 2 & 4: Image Left, Text Right */
+      .card-top-right,
+      .card-bottom-full {
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        border-radius: 20px;
+        padding-left: 20px;
+      }
+
+      /* .card-top-right h3,
+      .card-bottom-full h3 {
+        text-align: right;
+        padding-left: 15px;
+      } */
+       .pp-card.card-bottom-full h3{
+        margin-left: 9rem;
+       }
+              .pp-card.card-top-right h3{
+        margin-left: 9rem;
+       }
+
+
+      .card-top-right img,
+      .card-bottom-full img {
+        left: 0;
+        top: 0;
+        width: 45%;
+        height: 100%;
+        object-position: left center;
+      }
+    }
+
+    /* ==================== TABLET (768px - 1023px) ==================== */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .pain-points-section {
+        padding: 50px 15px;
+      }
+      .card-large-left img{
+        transform: scale(1.);
+        bottom: -37px;
+        right: -20px;
+      }
+      .card-bottom-full img {
+  transform: scale(2.2);
+  bottom: -20px;
+  left: -60px;
+}
+
+.pp-card.card-bottom-full h3{
+  margin-left: 9rem;
+  margin-bottom: 3rem;
+  
+}
+.pp-card.card-top-right h3 {
+  margin-left: 6rem;
+  
+}
+      .pp-card.card-mid-right img{
+        position: absolute;
+        transform: scale(2.0);
+        bottom: -20px;
+        right: 15px;
+     
+      }
+  .pp-card.card-top-right img{
+    transform: scale(2.0);
+    bottom: 10px;  
+    
+
+  }
+  .pp-card.card-large-left img{
+    transform: scale(1.5);
+    bottom: -20px;
+    right: 30px;
+  }
+
+      .pp-headline {
+        font-size: 2.8rem;
+        margin-bottom: 40px;
+      }
+
+      .pp-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .pp-card {
+        min-height: 200px;
+        padding: 25px;
+        border-radius: 25px;
+      }
+
+      .pp-card h3 {
+        font-size: 1.7rem;
+        max-width: 55%;
+      }
+
+      .pp-card img {
+        position: absolute;
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        filter: grayscale(100%);
+      }
+
+      /* Tablet - Maintain mobile-style layout */
+      .card-large-left,
+      .card-mid-right {
+        border-radius: 25px;
+      }
+      /* .pp-card img {
+        bottom: -47px;
+        right: -40px;
+
+      } */
+      .card-mid-right img {
+        bottom: -43px;
+        right: -30px;
+      }
+
+      .card-top-right,
+      .card-bottom-full {
+        border-radius: 25px;
+      }
+      .card-top-right img {
+        bottom: -43px;
+        left: -25px;
+      }
+
+      .card-large-left img,
+      .card-mid-right img {
+        right: 0;
+        width: 48%;
+      }
+
+      .card-top-right img,
+      .card-bottom-full img {
+        left: 0;
+        width: 48%;
+      }
+    }
+
+    /* ==================== DESKTOP (1024px+) - KEEP YOUR ORIGINAL WORKING STYLES ==================== */
+    @media (min-width: 1024px) {
+      .pp-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 20px;
+      }
+      .card-large-left,
+    .card-mid-right {
+      align-items: flex-end;
+      border-radius: 0px 30px 30px 30px;
+    }
+
+      .pp-card {
+        min-height: 130px;
+        padding: 25px 15px 25px 25px;
+      }
+
+      .card-top-right,
+      .card-bottom-full {
+        padding: 0 0;
+      }
+      /* .card-top-right img{
+        top: 500px;
+        right: 150px;
+      } */
+
+      .pp-card img {
+        width: 300px;
+        height: 300px;
+        padding-bottom: -100px;
+        padding-top: -100px;
+        filter: grayscale(100%);
+      }
+
+      .card-large-left img,
+      .card-mid-right img,
+      .card-top-right img,
+      .card-bottom-full img {
+        width: 200px;
+        height: 250px;
+        position: absolute;
+      }
+
+      .card-large-left img {
+        bottom: -50px;
+        right: -10px;
+      }
+
+      .card-mid-right img {
+        bottom: -80px;
+        right: -40px;
+        width: 250px;
+        height: 280px;
+      }
+      .pp-card.card-bottom-full h3{
+        padding: 1rem;
+       
+      }
+       .pp-card.card-top-right h3{
+        padding: 2rem;
+       
+      }
+
+      .card-top-right img {
+        bottom: -69px;
+        left: -20px;
+        width: 260px;
+        height: 290px;
+      }
+
+      .card-bottom-full img {
+        bottom: -90px;
+        left: -30px;
+        width: 260px;
+        height: 290px;
+      }
+
+      .pp-headline {
+        font-size: 4rem;
+      }
+
+      /* Desktop Hover Effect */
+      .pp-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .pp-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(141, 199, 61, 0.3);
+      }
+    }
+
+    /* ==================== EXTRA SMALL MOBILE (< 480px) ==================== */
+    @media (max-width: 479px) {
+      .pain-points-section {
+        padding: 25px 10px;
+      }
+   
+      .pp-headline {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+      }
+ 
+      .pp-card {
+        min-height: 113px;
+        padding: 18px 15px;
+        border-radius: 18px;
+      }
+
+      .pp-card h3 {
+        font-size: 1.3rem;
+      }
+
+      .pp-card img {
+        width: 42%;
+      }
+    }
+    /* Mobile Responsive */
+    @media (max-width: 767px) {
+      .fixed-enroll-button {
+        padding: 15px;
+      }
+
+      .fixed-enroll-button button {
+        font-size: 1rem;
+        padding: 15px 30px;
+      }
+    }
+
+    /* Desktop Layout */
+    @media (min-width: 768px) {
+      .footer-content {
+        display: flex;
+        /* Restore Flexbox for Desktop */
+        flex-direction: row;
+        gap: 40px;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+      }
+
+      .footer-column {
+        flex: 1;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      /* Reset order for desktop: Follow Us (1) | Logo (2) | Contact Us (3) */
+      .footer-column-left {
+        grid-column: auto;
+        grid-row: auto;
+        order: 1;
+      }
+
+      .footer-column-center {
+        grid-column: auto;
+        grid-row: auto;
+        margin-top: 0;
+        order: 2;
+        align-items: center;
+        flex: 1;
+      }
+
+      .footer-column-right {
+        grid-column: auto;
+        grid-row: auto;
+        order: 3;
+        align-items: flex-end;
+        flex: 1;
+      }
+
+      .footer-social-icons {
+        justify-content: flex-start;
+      }
+
+      .footer-column-right .footer-social-icons {
+        justify-content: flex-end;
+      }
+
+      .footer-column-right {
+        text-align: right;
+      }
+    }
+
+
+      /* Mobile Responsive */
+      @media (max-width: 767px) {
+        /* Pain Points Desktop Styles */
+
+
+        .creators-section {
+          padding: 60px 15px;
+        }
+
+        .creators-headline {
+          font-size: 1.8rem;
+          margin-bottom: 40px;
+        }
+
+        .creator-card {
+          width: calc(100vw - 60px);
+          min-width: 250px;
+        }
+
+        .creators-marquee-track {
+          gap: 20px;
+          animation-duration: 60s;
+        }
+
+        .creators-marquee-wrapper {
+          mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+          );
+          -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+          );
+        }
+
+        /* PRICING CARD */
+        
+      }
+
+      /* Tablet Layout */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .course-mentor-content {
+          min-height: 450px;
+        }
+
+        .mentor-portrait-wrapper {
+          width: 40%;
+        }
+
+        .mentor-info-card {
+          /* margin-left: 30%; */
+          width: 70%;
+          padding: 50px 40px;
+          min-height: 350px;
+        }
+
+        .mentor-badge {
+          left: 40%;
+          min-width: 220px;
+        }
+
+        .follower-count-number {
+          font-size: 3.5rem;
+        }
+
+        .follower-count-label {
+          font-size: 1.4rem;
+        }
+      }
+
+      /* Desktop Layout */
+      /* Desktop Layout */
+
+      .follower-count-platform {
+        font-size: 3.5rem;
+      }
+
+      @media (min-width: 1024px) {
+        /* achievment module */
+
+        .ach-grid {
+          flex-direction: row;
+        }
+
+        .ach-card {
+          font-size: 1.8rem;
+          padding: 40px 30px;
+          min-height: 180px;
+          /* Reduced desktop height too */
+        }
+
+        /* course module section */
+
+        .module-grid {
+          grid-template-columns: 1fr 1fr;
+          /* 2 Columns */
+          column-gap: 30px;
+          row-gap: 20px;
+        }
+
+        .module-headline {
+          font-size: 3rem;
+        }
+
+        /* course mentor section */
+
+        .course-mentor-logo h2 {
+          font-size: 4rem;
+        }
+
+        .course-mentor-content {
+          min-height: 550px;
+          width: 1725px;
+        }
+
+        .mentor-portrait-wrapper {
+          /* width: 38%; */
+          max-width: 1200px;
+          z-index: 10 !important;
+          /* Force on top */
+        }
+
+        .mentor-info-card {
+          padding: 40px 60px 60px 60px;
+          min-height: 450px;
+          /* margin-left: 20%; */
+          /* Shifted to allow more overlap */
+          width: 80%;
+        }
+
+        .mentor-badge {
+          padding: 25px 40px 25px 11%;
+          min-width: 500px;
+          left: 340px;
+          top: 28%;
+          /* Pull out to left to sit behind person */
+          border-radius: 30px 30px 10px 30px;
+        }
+
+        .mentor-badge-name {
+          font-size: 2.2rem;
+        }
+
+        .mentor-badge-title {
+          font-size: 1.1rem;
+        }
+
+        .follower-count-number {
+          font-size: 4rem;
+          /* Huge as per image */
+        }
+
+        .follower-count-label {
+          font-size: 3.5rem;
+          /* Smaller hierarchy */
+        }
+
+        .follower-count-platform {
+          font-size: 5rem;
+        }
+
+        /* creators section */
+        .creators-headline {
+          font-size: 3.5rem;
+        }
+
+        .creator-card {
+          width: 320px;
+        }
+
+        .creator-name {
+          font-size: 1.5rem;
+        }
+
+        .creator-role {
+          font-size: 1.1rem;
+        }
+
+
+        /* pricing plans */
+        .pricing-headline {
+        font-size: 3.5rem;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        overflow: visible;
+      }
+
+      .pricing-card {
+        max-width: 100%;
+      }
+      }
+
+      /* Tablet */
+      @media (max-width: 1024px) {
+        .hero-card {
+          padding: 3rem 0rem 0rem;
+        }
+        .headline {
+          font-size: clamp(1.5rem, 7vw, 4.5rem);
+        }
+
+        .inner-banner {
+          background-color: #729535dc;
+        }
+        .mentor-img {
+          width: clamp(280px, 50vw, 420px);
+          left: 5%;
+        }
+
+        .curve {
+          height: 380px;
+          margin: 0px -90px 0px 0px;
+        }
+
+        .mentor-name {
+          font-size: clamp(1.8rem, 4vw, 2.5rem);
+          margin-left: -8rem;
+        }
+
+        .nisam-about {
+          position: absolute;
+          bottom: 15%;
+          left: 55%; /* ഇവിടെ മാറ്റം */
+          transform: translateX(-50%);
+          z-index: 3;
+          text-align: center;
+        }
+        .mentor-name-tag {
+          padding: 10px 20px;
+          font-size: 1.2rem;
+          bottom: 5%;
+          width: 30rem;
+          /* left:-8rem; */
+          z-index: 3;
+        }
+
+        /* pricing section */
+
+        .pricing-section {
+        padding: 60px 15px;
+      }
+
+      .pricing-headline {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+      }
+
+      .pricing-grid {
+        display: flex;
+        flex-direction: column;
+        /* Stack vertically */
+        align-items: center;
+        gap: 30px;
+      }
+
+      .pricing-grid::-webkit-scrollbar {
+        display: none;
+      }
+
+      .pricing-card {
+        width: 100%;
+        max-width: 400px;
+        /* Limit width for better look */
+        flex: auto;
+      }
+
+      .pricing-card:hover {
+        transform: scale(1.02);
+      }
+      }
+
+      /* Mobile - Name behind image */
+      @media (max-width: 768px) {
+        .hero-card {
+          padding: 2rem 0rem 4rem;
+          border-radius: 30px;
+        }
+
+        .inner-banner {
+          background-color: #729535dc;
+        }
+        .stats-badge {
+          width: 150px;
+          height: 160px;
+          font-size: 1.5rem;
+          bottom: 40%;
+          right: 5%;
+        }
+
+        .mentor-area {
+          min-height: 400px;
+        }
+
+        .mentor-area path {
+          height: 30rem;
+        }
+        .mentor-img {
+          width: clamp(200px, 60vw, 300px);
+          left: 32%;
+          transform: translateX(-50%);
+          bottom: -30px;
+          z-index: 5; /* image മുകളിൽ */
+        }
+
+        .nisam-about {
+          position: absolute;
+          bottom: 15%;
+          left: 67%;
+          transform: translateX(-50%);
+          z-index: 3; /* name image-ന് താഴെ */
+          text-align: center;
+        }
+        .curve {
+          height: 300px;
+          bottom: -30px;
+          margin: 0px -90px 0px 0px;
+        }
+
+        .cta-curve {
+          /* height: 300px;
+          bottom: 0px; first SVG-ന് താഴെ shift */
+          margin-top: 7rem;
+        }
+        .cta-buttons {
+          margin-top: 10rem;
+        }
+        .mentor-name {
+          font-size: 1.6rem;
+          bottom: 8%; /* image-ന്റെ താഴെ adjust */
+          z-index: 3; /* image-ന് താഴെ */
+        }
+
+        .headline {
+          font-size: clamp(1.5rem, 7vw, 2rem);
+        }
+        .mentor-name-tag {
+          padding: 10px 20px;
+          font-size: 1rem;
+          bottom: 5%;
+          width: 15rem;
+          margin-left: -10rem;
+          z-index: 3;
+        }
+
+        .cta-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        /* course mentor section */
+
+        /* .course-mentor-section {
+          padding: 60px 15px;
+        } */
+
+        .course-mentor-logo {
+          text-align: center;
+          margin-bottom: 30px;
+          padding-left: 0;
+        }
+
+        .course-mentor-logo h2 {
+          font-size: 2rem;
+        }
+
+        .course-mentor-content {
+          min-height: auto;
+          align-items: center;
+        }
+
+        .mentor-portrait-wrapper {
+          position: relative;
+          width: 100%;
+          max-width: 300px;
+          margin-bottom: 0px;
+          z-index: 3;
+          position: absolute;
+          max-height: 200px;
+          top: -5px;
+          margin: 0;
+          left: -30px;
+        }
+
+        .mentor-portrait {
+          filter: grayscale(100%);
+          margin: 0;
+        }
+
+        .mentor-info-card {
+          margin-left: 0;
+          width: 100%;
+          padding: 40px 25px;
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          max-height: 150px;
+          position: relative;
+        }
+
+        .mentor-badge {
+          position: relative;
+          /* left: auto;
+        top: auto; */
+          padding-left: 60px;
+          left: 30px;
+          top: 40px;
+          border-radius: 0px 10px 40px 20px;
+          transform: none;
+          width: 100%;
+          max-width: 240px;
+          padding: 18px 22px;
+          text-align: center;
+        }
+
+        .mentor-badge-name {
+          font-size: 1.2rem;
+        }
+
+        .mentor-badge-title {
+          font-size: 0.9rem;
+        }
+
+        .follower-count {
+          text-align: center;
+          width: 100%;
+          padding-right: 0;
+        }
+
+        .follower-count-number {
+          font-size: 3.5rem;
+        }
+
+        .follower-count-label {
+          font-size: 1.3rem;
+        }
+
+        .follower-count-platform {
+          font-size: 0.95rem;
+        }
+
+      }
+
+      @media (max-width: 657px) {
+        .btn-cta {
+          font-size: 1.3rem;
+          min-width: 300px;
+          padding: 1rem 2rem;
+          /* margin-top: -1rem; */
+        }
+        .mentor-name {
+          font-size: 1.4rem;
+          margin-left: 0.5rem;
+        }
+        .mentor-name-tag {
+          width: 8rem;
+          font-size: 0.7rem;
+          margin-left: 1rem;
+        }
+        .cta-buttons {
+          margin-top: -3rem;
+        }
+        /* .star-1{
+        margin-bottom: -100rem;
+       } */
+        .star-4 {
+          font-size: 3rem;
+          margin-bottom: 5.5rem;
+          margin-left: 1rem;
+        }
+        .star-1 {
+          font-size: 3rem;
+          margin-bottom: -10rem;
+          margin-left: 1rem;
+        }
+        .stats-badge {
+          font-size: 1.2rem;
+          margin-bottom: -3rem;
+        }
+        .inner-banner {
+          background-color: #729535dc;
+        }
+        .inner-banner h2 {
+          font-size: 1rem;
+        }
+        .pricing-grid{
+          width: 21rem;
+          margin-left: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+
+    <!-- navbar section -->
+
+    <div class="top-strip">
+    Create Engage Grow
+  </div>
+
+  <!-- Header / Nav Area -->
+  <!-- Note: In implementation, background color handling needs care. 
+         The top part of the page in screenshot is Green. 
+         But Global requires "Background: Solid Black".
+         The image shows the green container is effectively the hero.
+         We will keep the body black, and the nav area can be within the flow or distinct.
+         Let's put the Nav inside the main container visual flow or separate.
+         Based on "Top Banner Strip" then "Navigation Area", then "Main Headline" inside "Large Container"..
+         Actually, strictly looking at the image:
+         The top strip is 100% width.
+         The "Navigation" (Text left, Button right) sits on a dark green background.
+         The "Rounded Hero Card" sits below that? OR is the navigation part of the rounded card?
+         In the image, the "Personal Branding Masterclass" is white text on a green background.
+         The Rounded Card STARTS below the nav? Or contains it?
+         Looking at corner radius: The TOP of the image is square (the strip).
+         The "Personal Branding..." area has square corners at top?
+         Then the "Personal Branding Mastery" inner banner is inside a rounded container.
+         
+         Correction: The "Personal Branding Masterclass" line is likely just above the rounded container background, 
+         or the rounded container starts AFTER the top navigation.
+         Let's assume:
+         1. Top Strip (Full width)
+         2. Nav Bar (Full width, Green Background to match hero or transparent?) 
+            Let's make Nav Bar Green key color to blend.
+         3. Hero Card (Rounded green container) centered in black body? 
+    -->
+
+  <div class="nav-wrapper">
+    <nav class="nav-container">
+      <div class="nav-logo">
+        <div class="nav-logo-text">
+          Personal <br>
+          <span>Branding Masterclass</span>
+        </div>
+      </div>
+      <div class="nav-logo-right">
+        <img src="d logo.png" alt="Logo">
+      </div>
+    </nav>
+  </div>
+
+
+    <!-- Hero section -->
+    <section class="hero-section">
+      <div class="hero-card">
+        <!-- Stars -->
+        <div class="star star-1">✦</div>
+        <div class="star star-2">✦</div>
+        <!-- <div class="star star-3">✦</div> -->
+        <div class="star star-4">✦</div>
+
+        <div class="inner-banner">
+          <h2>Personal Branding Mastery</h2>
+        </div>
+
+        <h1 class="headline">
+          <span style="font-weight: 100">
+            Build a Personal Brand<br />
+            That Gets You<br
+          /></span>
+          <span style="font-weight: 900">Clients,</span><br />
+          <span style="font-weight: 900">Respect</span> &
+          <span style="font-weight: 900">Opportunities</span>
+        </h1>
+
+        <div class="mentor-area">
+          <svg class="curve" viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path
+              d="M0,60 C240,10 480,10 720,40 C960,70 1200,60 1440,30 L1440,260 C1200,300 960,300 720,280 C480,260 240,260 0,300 Z"
+              fill="#6b8e23"
+            />
+          </svg>
+
+          <img src="assets/nisam vm.png" alt="Nisam VM" class="mentor-img" />
+
+          <div class="nisam-about">
+            <span class="mentor-name">NISAM VM</span>
+            <div class="mentor-name-tag">
+              CEO - Desgro Media <br />
+              Demand School
+            </div>
+          </div>
+
+          <div class="stats-badge">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>565+ Enrolled</span>
+          </div>
+        </div>
+
+        <div class="cta-container">
+          <svg
+            class="cta-curve"
+            viewBox="0 0 1440 320"
+            preserveAspectRatio="none"
+          >
+            <defs>
+              <linearGradient
+                id="ctaGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
+                <stop offset="0%" style="stop-color: #435c19" />
+                <stop offset="100%" style="stop-color: #556b2f" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M0,60 C240,10 480,10 720,40 C960,70 1200,60 1440,30 L1440,260 C1200,300 960,300 720,280 C480,260 240,260 0,300 Z"
+              fill="url(#ctaGradient)"
+            />
+          </svg>
+          <div class="cta-buttons">
+            <button class="btn-cta">
+              <span style="font-weight: 500">Course Duration</span> <br />
+              <span style="font-weight: 800">1hr 30 min +</span>
+            </button>
+            <button class="btn-cta">
+              <span style="font-weight: 500">Monthly</span> <br />
+              <span style="font-weight: 800"> Mentorship Session</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Scroll Banner Section -->
+    <section class="scroll-banner-section">
+      <div class="banner-band band-1">
+        <!-- Text repeated enough to cover flow. 
+                 Using Javascript to populate might be cleaner, 
+                 but user asked for CSS focus. We can put a few here and duplicated.
+                 For infinite scroll, we need the pattern to repeat. 
+            -->
+        <div class="banner-content">
+          Create Engage Grow . Create Engage Grow . Create Engage Grow . Create
+          Engage Grow . Create Engage Grow . Create Engage Grow . Create Engage
+          Grow . Create Engage Grow . Create Engage Grow . Create Engage Grow .
+          Create Engage Grow . Create Engage Grow . Create Engage Grow . Create
+          Engage Grow . Create Engage Grow . Create Engage Grow . Create Engage
+          Grow . Create Engage Grow . Create Engage Grow . Create Engage Grow .
+        </div>
+      </div>
+      <div class="banner-band band-2">
+        <div class="banner-content">
+          Create Engage Grow . Create Engage Grow . Create Engage Grow . Create
+          Engage Grow . Create Engage Grow . Create Engage Grow . Create Engage
+          Grow . Create Engage Grow . Create Engage Grow . Create Engage Grow .
+          Create Engage Grow . Create Engage Grow . Create Engage Grow . Create
+          Engage Grow . Create Engage Grow . Create Engage Grow . Create Engage
+          Grow . Create Engage Grow . Create Engage Grow . Create Engage Grow .
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+      <div class="video-container">
+        <iframe
+          src="https://drive.google.com/file/d/137Jn0KtvUH8ZoMWV-JzwZwt4ilAccBxS/view?usp=sharing"
+          width="640"
+          height="360"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+
+
+    <!-- pain points -->
+
+    <section class="pain-points-section">
+    <div class="pain-points-container">
+      <h2 class="pp-headline">
+        <span>Struggling</span> With <br>
+        Any of These?
+      </h2>
+
+      <div class="pp-grid">
+        <!-- Item 1: Large Left -->
+        <div class="pp-card card-large-left">
+          <h3>Not Knowing <br> Where <br> to Start</h3>
+          <img src="assets/asna2.png" alt="Thinking Person">
+        </div>
+
+        <!-- Item 2: Top Right -->
+        <div class="pp-card card-top-right">
+          <img src="assets/aflu2.png" alt="Low Engagement">
+          <h3>Low <br> Engagement & <br> No Community</h3>
+        </div>
+
+        <!-- Item 3: Mid Right -->
+        <div class="pp-card card-mid-right">
+          <h3>Poor Content <br> Structure</h3>
+          <img src="assets/asna1.png" alt="Poor Content Structure">
+        </div>
+
+        <!-- Item 4: Bottom Full -->
+        <div class="pp-card card-bottom-full">
+          <img src="assets/aflu-1.png" alt="Lack of Consistency">
+          <h3>Lack of </br> Consistency</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- Achievements Section -->
+    <section class="achievements-section">
+      <div class="achievements-container">
+        <h2 class="ach-headline">
+          Here's What <br />
+          You'll <span>Achieve</span>
+        </h2>
+
+        <div class="ach-grid">
+          <!-- Card 1 -->
+          <div class="ach-card">
+            Build Your <br />
+            Identity
+          </div>
+
+          <!-- Card 2 -->
+          <div class="ach-card">
+            Grow Your <br />
+            Engagement
+          </div>
+
+          <!-- Card 3 -->
+          <div class="ach-card">
+            Become a <br />
+            Recognised <br />
+            Expert
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Module Section -->
+    <section class="course-module-section">
+      <div class="module-container">
+        <h2 class="module-headline">Course <span>Module</span></h2>
+
+        <div class="module-grid">
+          <!-- Module 1 -->
+          <div class="module-item">
+            <div class="module-header">
+              <span
+                >Module 1: <br />
+                Why Personal Branding</span
+              >
+              <i class="fa-solid fa-plus icon"></i>
+            </div>
+            <div class="module-content">
+              <p>
+                Why personal branding matters in today's digital-first world<br />
+                How a strong personal brand creates career and business
+                opportunities<br />
+                The impact of personal branding on trust, influence, and
+                visibility
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 2 -->
+          <div class="module-item">
+            <div class="module-header">
+              <span
+                >Module 2: <br />
+                Building Your Brand Foundation</span
+              >
+              <i class="fa-solid fa-plus icon"></i>
+            </div>
+            <div class="module-content">
+              <p>
+                Identifying your niche and area of expertise<br />
+                How to understand your target audience and their needs<br />
+                Defining your brand personality and tone of voice
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 3 -->
+          <div class="module-item">
+            <div class="module-header">
+              <span
+                >Module 3: <br />
+                Content Creation</span
+              >
+              <i class="fa-solid fa-plus icon"></i>
+            </div>
+            <div class="module-content">
+              <p>
+                Types of content that work for personal brands<br />
+                Creating content that reflects your identity and expertise<br />
+                Basics of storytelling for personal branding<br />
+                Building confidence to show up on camera or in writing
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="module-item">
+            <div class="module-header">
+              <span
+                >Module 4: <br />
+                Viral Content Creation</span
+              >
+              <i class="fa-solid fa-plus icon"></i>
+            </div>
+            <div class="module-content">
+              <p>
+                Psychology behind viral content<br />
+                What makes people stop scrolling<br />
+                Using emotions, relatability, and trends effectively
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 5 -->
+          <div class="module-item">
+            <div class="module-header">
+              <span
+                >Module 5: <br />
+                Content Structure</span
+              >
+              <i class="fa-solid fa-plus icon"></i>
+            </div>
+            <div class="module-content">
+              <p>
+                Simple frameworks to organise content ideas<br />
+                How to script short-form and long-form content<br />
+                Structuring posts for clarity and impact
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 6 -->
+          <div class="module-item">
+            <div class="module-header">
+              <span
+                >Module 6: <br />
+                Community Building and Engagement</span
+              >
+              <i class="fa-solid fa-plus icon"></i>
+            </div>
+            <div class="module-content">
+              <p>
+                Difference between followers and community<br />
+                Building trust through authentic interaction<br />
+                How to engage using comments, DMs, and stories
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 7 -->
+          <div class="module-item">
+            <div class="module-header">
+              <span
+                >Module 7: <br />
+                Establishing Industry Authority</span
+              >
+              <i class="fa-solid fa-plus icon"></i>
+            </div>
+            <div class="module-content">
+              <p>
+                Positioning yourself as an industry expert<br />
+                Creating thought leadership content<br />
+                Sharing insights, opinions, and experiences confidently
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 8 -->
+          <div class="module-item">
+            <div class="module-header">
+              <span
+                >Module 8: <br />
+                The Motivation and The Consistency</span
+              >
+              <i class="fa-solid fa-plus icon"></i>
+            </div>
+            <div class="module-content">
+              <p>
+                Developing the right mindset for long-term growth<br />
+                Overcoming fear, self-doubt, and burnout<br />
+                Building habits that keep your personal brand growing
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Mentor Section -->
+    <section class="course-mentor-section">
+      <div class="course-mentor-container">
+        <div class="course-mentor-logo">
+          <h2>
+            <span class="course-text">Course</span>
+            <span class="mentor-text">Mentor</span>
+          </h2>
+        </div>
+
+        <div class="course-mentor-content">
+          <div class="mentor-portrait-wrapper">
+            <img
+              src="assets/nisam vm.png"
+              alt="Nisam VM"
+              class="mentor-portrait"
+            />
+          </div>
+
+          <div class="mentor-info-card">
+            <div class="mentor-badge">
+              <span class="mentor-badge-name">NISAM VM</span>
+              <span class="mentor-badge-title">
+                CEO - <span> Desgro Media</span><br />
+                Demand School
+              </span>
+            </div>
+
+            <div class="follower-count">
+              <div class="follower-count-number">146k+</div>
+              <div class="follower-count-label">Followers</div>
+              <div class="follower-count-platform">on Instagram</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creators We Work With Section -->
+    <section class="creators-section">
+      <div class="creators-container">
+        <h2 class="creators-headline">
+          <span class="creators-text">Creators</span>
+          <span class="work-text">we Work with</span>
+        </h2>
+
+        <div class="creators-marquee-wrapper">
+          <div class="creators-marquee-track">
+            <!-- First Set of Cards -->
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/jesna.png" alt="Jesna" />
+                </div>
+              </div>
+              <div class="creator-name">JESNA M</div>
+              <div class="creator-role">Content Strategist</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/shamsudheen.png" alt="Shamsudheen" />
+                </div>
+              </div>
+              <div class="creator-name">SHAMSUDHEEN</div>
+              <div class="creator-role">Digital Marketing Expert</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/sreelal.png" alt="Sreelal" />
+                </div>
+              </div>
+              <div class="creator-name">SREELAL</div>
+              <div class="creator-role">Brand Consultant</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/abida rasheed.png" alt="Abida Rasheed" />
+                </div>
+              </div>
+              <div class="creator-name">ABIDA RASHEED</div>
+              <div class="creator-role">Social Media Manager</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/badarul muneer.png" alt="Badarul Muneer" />
+                </div>
+              </div>
+              <div class="creator-name">BADARUL MUNEER</div>
+              <div class="creator-role">Video Producer</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/faisal.png" alt="Faisal" />
+                </div>
+              </div>
+              <div class="creator-name">FAISAL</div>
+              <div class="creator-role">Content Creator</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/fazil.png" alt="Fazil" />
+                </div>
+              </div>
+              <div class="creator-name">FAZIL</div>
+              <div class="creator-role">Marketing Strategist</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/feroz.png" alt="Feroz" />
+                </div>
+              </div>
+              <div class="creator-name">FEROZ</div>
+              <div class="creator-role">Brand Designer</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/henna ayoob.png" alt="Henna Ayoob" />
+                </div>
+              </div>
+              <div class="creator-name">HENNA AYOOB</div>
+              <div class="creator-role">Influencer Manager</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/henna gazal.png" alt="Henna Gazal" />
+                </div>
+              </div>
+              <div class="creator-name">HENNA GAZAL</div>
+              <div class="creator-role">Content Writer</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/ishaq.png" alt="Ishaq" />
+                </div>
+              </div>
+              <div class="creator-name">ISHAQ</div>
+              <div class="creator-role">Digital Strategist</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/javad.png" alt="Javad" />
+                </div>
+              </div>
+              <div class="creator-name">JAVAD</div>
+              <div class="creator-role">Media Producer</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/jesna james.png" alt="Jesna James" />
+                </div>
+              </div>
+              <div class="creator-name">JESNA JAMES</div>
+              <div class="creator-role">Brand Ambassador</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/kadeeja.png" alt="Kadeeja" />
+                </div>
+              </div>
+              <div class="creator-name">KADEEJA</div>
+              <div class="creator-role">Community Manager</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/philip.png" alt="Philip" />
+                </div>
+              </div>
+              <div class="creator-name">PHILIP</div>
+              <div class="creator-role">Creative Lead</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/safeena.png" alt="Safeena" />
+                </div>
+              </div>
+              <div class="creator-name">SAFEENA</div>
+              <div class="creator-role">Social Media Expert</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/shafi myg.png" alt="Shafi" />
+                </div>
+              </div>
+              <div class="creator-name">SHAFI</div>
+              <div class="creator-role">Content Director</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/shaheen.png" alt="Shaheen" />
+                </div>
+              </div>
+              <div class="creator-name">SHAHEEN</div>
+              <div class="creator-role">Marketing Consultant</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/suhail.png" alt="Suhail" />
+                </div>
+              </div>
+              <div class="creator-name">SUHAIL</div>
+              <div class="creator-role">Brand Strategist</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/suhana.png" alt="Suhana" />
+                </div>
+              </div>
+              <div class="creator-name">SUHANA</div>
+              <div class="creator-role">Digital Creator</div>
+            </div>
+
+            <!-- Duplicate Set for Seamless Loop -->
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/jesna.png" alt="Jesna" />
+                </div>
+              </div>
+              <div class="creator-name">JESNA M</div>
+              <div class="creator-role">Content Strategist</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/shamsudheen.png" alt="Shamsudheen" />
+                </div>
+              </div>
+              <div class="creator-name">SHAMSUDHEEN</div>
+              <div class="creator-role">Digital Marketing Expert</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/sreelal.png" alt="Sreelal" />
+                </div>
+              </div>
+              <div class="creator-name">SREELAL</div>
+              <div class="creator-role">Brand Consultant</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/abida rasheed.png" alt="Abida Rasheed" />
+                </div>
+              </div>
+              <div class="creator-name">ABIDA RASHEED</div>
+              <div class="creator-role">Social Media Manager</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/asna.png" alt="Asna" />
+                </div>
+              </div>
+              <div class="creator-name">ASNA</div>
+              <div class="creator-role">Creative Director</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/badarul muneer.png" alt="Badarul Muneer" />
+                </div>
+              </div>
+              <div class="creator-name">BADARUL MUNEER</div>
+              <div class="creator-role">Video Producer</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/faisal.png" alt="Faisal" />
+                </div>
+              </div>
+              <div class="creator-name">FAISAL</div>
+              <div class="creator-role">Content Creator</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/fazil.png" alt="Fazil" />
+                </div>
+              </div>
+              <div class="creator-name">FAZIL</div>
+              <div class="creator-role">Marketing Strategist</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/feroz.png" alt="Feroz" />
+                </div>
+              </div>
+              <div class="creator-name">FEROZ</div>
+              <div class="creator-role">Brand Designer</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/henna ayoob.png" alt="Henna Ayoob" />
+                </div>
+              </div>
+              <div class="creator-name">HENNA AYOOB</div>
+              <div class="creator-role">Influencer Manager</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/henna gazal.png" alt="Henna Gazal" />
+                </div>
+              </div>
+              <div class="creator-name">HENNA GAZAL</div>
+              <div class="creator-role">Content Writer</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/ishaq.png" alt="Ishaq" />
+                </div>
+              </div>
+              <div class="creator-name">ISHAQ</div>
+              <div class="creator-role">Digital Strategist</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/javad.png" alt="Javad" />
+                </div>
+              </div>
+              <div class="creator-name">JAVAD</div>
+              <div class="creator-role">Media Producer</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/jesna james.png" alt="Jesna James" />
+                </div>
+              </div>
+              <div class="creator-name">JESNA JAMES</div>
+              <div class="creator-role">Brand Ambassador</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/kadeeja.png" alt="Kadeeja" />
+                </div>
+              </div>
+              <div class="creator-name">KADEEJA</div>
+              <div class="creator-role">Community Manager</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/philip.png" alt="Philip" />
+                </div>
+              </div>
+              <div class="creator-name">PHILIP</div>
+              <div class="creator-role">Creative Lead</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/safeena.png" alt="Safeena" />
+                </div>
+              </div>
+              <div class="creator-name">SAFEENA</div>
+              <div class="creator-role">Social Media Expert</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/shafi myg.png" alt="Shafi" />
+                </div>
+              </div>
+              <div class="creator-name">SHAFI</div>
+              <div class="creator-role">Content Director</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/shaheen.png" alt="Shaheen" />
+                </div>
+              </div>
+              <div class="creator-name">SHAHEEN</div>
+              <div class="creator-role">Marketing Consultant</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/suhail.png" alt="Suhail" />
+                </div>
+              </div>
+              <div class="creator-name">SUHAIL</div>
+              <div class="creator-role">Brand Strategist</div>
+            </div>
+
+            <div class="creator-card">
+              <div class="creator-image-wrapper">
+                <div class="creator-bg"></div>
+                <div class="creator-image">
+                  <img src="assets/suhana.png" alt="Suhana" />
+                </div>
+              </div>
+              <div class="creator-name">SUHANA</div>
+              <div class="creator-role">Digital Creator</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- scroll banner  -->
+
+    <section class="scroll-banner-section">
+      <div class="banner-band band-1">
+        <!-- Text repeated enough to cover flow. 
+                 Using Javascript to populate might be cleaner, 
+                 but user asked for CSS focus. We can put a few here and duplicated.
+                 For infinite scroll, we need the pattern to repeat. 
+            -->
+        <div class="banner-content">
+          Create Engage Grow . Create Engage Grow . Create Engage Grow . Create
+          Engage Grow . Create Engage Grow . Create Engage Grow . Create Engage
+          Grow . Create Engage Grow . Create Engage Grow . Create Engage Grow .
+          Create Engage Grow . Create Engage Grow . Create Engage Grow . Create
+          Engage Grow . Create Engage Grow . Create Engage Grow . Create Engage
+          Grow . Create Engage Grow . Create Engage Grow . Create Engage Grow .
+        </div>
+      </div>
+      <div class="banner-band band-2">
+        <div class="banner-content">
+          Create Engage Grow . Create Engage Grow . Create Engage Grow . Create
+          Engage Grow . Create Engage Grow . Create Engage Grow . Create Engage
+          Grow . Create Engage Grow . Create Engage Grow . Create Engage Grow .
+          Create Engage Grow . Create Engage Grow . Create Engage Grow . Create
+          Engage Grow . Create Engage Grow . Create Engage Grow . Create Engage
+          Grow . Create Engage Grow . Create Engage Grow . Create Engage Grow .
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Plans Section -->
+    <section class="pricing-section">
+      <div class="pricing-container">
+        <h2 class="pricing-headline">Choose Your <span>Plan</span></h2>
+
+        <div class="pricing-grid">
+          <!-- Basic Plan -->
+          <div class="pricing-card">
+            <h3 class="plan-title">Basic Plan</h3>
+            <div class="plan-price">₹1,799</div>
+
+            <div class="plan-features">
+              <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <span>Pre-recorded Masterclass Videos</span>
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-square-xmark"></i>
+                <span>Live Classes</span>
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <span>Certificate of Completion</span>
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <span>Access Validity: 3 Month</span>
+              </div>
+            </div>
+
+            <button class="plan-button">Enroll Now</button>
+          </div>
+
+          <!-- Standard Plan -->
+          <div class="pricing-card">
+            <h3 class="plan-title">Standard Plan</h3>
+            <div class="plan-price">₹2,499</div>
+
+            <div class="plan-features">
+              <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <span>Pre-recorded Masterclass Videos</span>
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <span>1 Live Class</span>
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <span>Certificate of Completion</span>
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <span>Access Validity: 3 Month</span>
+              </div>
+            </div>
+
+            <button class="plan-button">Enroll Now</button>
+          </div>
+
+          <!-- Advanced Plan -->
+          <div class="pricing-card">
+            <h3 class="plan-title">Advanced Plan</h3>
+            <div class="plan-price">₹3,499</div>
+
+            <div class="plan-features">
+              <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <span>Pre-recorded Masterclass Videos</span>
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <span>6 Live Classes</span>
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <span>Certificate of Completion</span>
+              </div>
+              <div class="feature-item">
+                <i class="fa-solid fa-square-check"></i>
+                <span>Access Validity: 12 Month</span>
+              </div>
+            </div>
+
+            <button class="plan-button">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="course-module-section">
+    <div class="module-container">
+      <h2 class="module-headline">Frequently<span
+          style="margin-left: 10px; color: white;">Asked</span><br><span>Questions</span></h2>
+
+      <div class="module-grid">
+
+
+        <!-- Question 1 -->
+
+
+        <div class="module-item">
+          <div class="module-header">
+            <span>Who is this course for?</span>
+            <i class="fa-solid fa-plus icon"></i>
+          </div>
+          <div class="module-content">
+            <p>This course is designed for creators, freelancers, entrepreneurs, and anyone who wants to build a strong
+              personal brand that attracts clients and opportunities.</p>
+          </div>
+        </div>
+        
+
+
+        <!-- Question 2 -->
+
+
+        <div class="module-item">
+          <div class="module-header">
+            <span>How long is the course?</span>
+            <i class="fa-solid fa-plus icon"></i>
+          </div>
+          <div class="module-content">
+            <p>The core masterclass runs for 1 hr 30+ minutes, but you'll also get monthly live mentorship sessions
+              (depending on your plan).</p>
+          </div>
+        </div>
+
+
+        <!-- Question 3 -->
+
+
+        <div class="module-item">
+          <div class="module-header">
+            <span>Will this help me grow on Instagram?</span>
+            <i class="fa-solid fa-plus icon"></i>
+          </div>
+          <div class="module-content">
+            <p>Yes. You'll learn content pillars, engagement strategies, and community-building techniques specifically
+              for Instagram.</p>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+
+
+        <div class="module-item">
+          <div class="module-header">
+            <span>Is this course suitable for working professionals?</span>
+            <i class="fa-solid fa-plus icon"></i>
+          </div>
+          <div class="module-content">
+            <p>Yes! All sessions can be watched anytime, and the system is built for busy schedules.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+<footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Left Column: Follow Us -->
+        <div class="footer-column footer-column-left">
+          <div class="footer-column-title">Follow us on</div>
+          <div class="footer-social-icons">
+            <a href="https://linkedin.com/company/demandschoolofficial" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/demand.school?igsh=Nzhudm0zdXN0azY%3D&utm_source=qr" target="_blank"
+              rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Center Column: Logo -->
+        <div class="footer-column footer-column-center">
+          <div class="footer-logo">
+            <img src="d logo.png" alt="Demand School Logo">
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Us -->
+        <div class="footer-column footer-column-right">
+          <div class="footer-column-title">Contact us on</div>
+          <div class="footer-social-icons">
+            <a href="https://wa.me/918891804490" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed Enroll Button -->
+  <div class="fixed-enroll-button">
+    <button>Enroll Now</button>
+  </div>
+
+    <!-- Script for any interactivity if needed -->
+    <script>
+      console.log("Hero Section Loaded");
+
+      // Accordion Functionality
+      const moduleHeaders = document.querySelectorAll(".module-header");
+
+      moduleHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          // Find the parent module-item, then find the content within it
+          const moduleItem = header.closest(".module-item");
+          const content = moduleItem
+            ? moduleItem.querySelector(".module-content")
+            : null;
+          const icon = header.querySelector(".icon");
+
+          if (!content) return;
+
+          // Close other modules if desired (optional - keeping independent for now as standard accordion often allows multiple open)
+          // If "Singular" opening is needed:
+
+          //  document.querySelectorAll('.module-content').forEach(c => {
+          //    if(c !== content && c.style.maxHeight) {
+          //         c.style.maxHeight = null;
+          //         c.classList.remove('active');
+          //         c.closest('.module-item').querySelector('.icon').classList.remove('fa-minus');
+          //        c.closest('.module-item').querySelector('.icon').classList.add('fa-plus');
+          //   }
+          //  });
+
+          if (content.style.maxHeight && content.style.maxHeight !== "0px") {
+            // Collapse
+            content.style.maxHeight = null;
+            content.classList.remove("active");
+            icon.classList.remove("fa-minus");
+            icon.classList.add("fa-plus");
+          } else {
+            // Expand
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.classList.add("active");
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-minus");
+          }
+        });
+      });
+
+      // Fixed Enroll Button - Smooth Scroll to Pricing Section
+      const enrollButton = document.querySelector(
+        ".fixed-enroll-button button"
+      );
+      if (enrollButton) {
+        enrollButton.addEventListener("click", () => {
+          const pricingSection = document.querySelector(".pricing-section");
+          if (pricingSection) {
+            pricingSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      }
+
+      // faq script start here
+
+      document.querySelectorAll(".faq-header").forEach((header) => {
+        header.addEventListener("click", () => {
+          const item = header.parentElement;
+
+          // Close other items (Optional: remove this if you want multiple open)
+          document.querySelectorAll(".faq-item").forEach((otherItem) => {
+            if (otherItem !== item) {
+              otherItem.classList.remove("active");
+            }
+          });
+
+          // Toggle current item
+          item.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>
